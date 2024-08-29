@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const validPassword = await verify(password, user.password, {
+  const validPassword = await verify(user.password, password, {
     memoryCost: 19456,
     timeCost: 2,
     outputLen: 32,
