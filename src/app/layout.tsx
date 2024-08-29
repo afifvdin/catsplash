@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import "./globals.css"
+import ReactQueryProvider from "@/components/react-query-provider"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={GeistSans.className + " tracking-tight h-full"}>
-        {children}
+        <ReactQueryProvider>{children}</ReactQueryProvider>
       </body>
     </html>
   )
