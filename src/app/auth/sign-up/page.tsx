@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useRouter } from "next/navigation"
-import { FormEvent, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 import { useSignUp } from "@/services/mutations"
 import ErrorLine from "@/components/custom-ui/error-line"
 
@@ -36,9 +36,10 @@ export default function SignUpPage() {
     signUp(form)
   }
 
-  if (isSuccess) {
+  useEffect(() => {
+    if (!isSuccess) return
     router.push("/")
-  }
+  }, [isSuccess])
 
   return (
     <div className="min-h-full flex flex-col items-center justify-center">

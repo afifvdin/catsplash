@@ -12,10 +12,10 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useRouter } from "next/navigation"
-import { FormEvent, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 import { useSignIn } from "@/services/mutations"
 import ErrorLine from "@/components/custom-ui/error-line"
+import { useRouter } from "next/navigation"
 
 export default function SignInPage() {
   const router = useRouter()
@@ -34,9 +34,11 @@ export default function SignInPage() {
     signIn(form)
   }
 
-  if (isSuccess) {
+  useEffect(() => {
+    if (!isSuccess) return
     router.push("/")
-  }
+  }, [isSuccess])
+
   return (
     <div className="min-h-full flex flex-col items-center justify-center">
       <Card className="mx-auto max-w-sm">
