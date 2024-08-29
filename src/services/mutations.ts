@@ -7,7 +7,9 @@ export function useSignUp() {
   return useMutation({
     mutationKey: ["signUp"],
     mutationFn: (data: SignUpForm) => signUp(data),
-    onError: (error: AxiosError<AuthError>) => {},
+    onError: (error: AxiosError<AuthError>) => {
+      console.log(error)
+    },
   })
 }
 export function useSignIn() {
