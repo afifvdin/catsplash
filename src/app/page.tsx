@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto py-24">
+    <div className="max-w-4xl mx-auto py-24 px-4">
       <h1 className="text-7xl text-center font-semibold tracking-tighter">
         Catsplash
       </h1>
@@ -93,7 +93,12 @@ export default function Home() {
         />
       )}
       {isPending || isFetching ? (
-        <div className={cn(say !== "" && "hidden", "columns-3 gap-6")}>
+        <div
+          className={cn(
+            say !== "" && "hidden",
+            "sm:columns-2 lg:columns-3 gap-6"
+          )}
+        >
           <div className="mt-6 inline-block w-full h-48 bg-zinc-200 animate-pulse" />
           <div className="mt-6 inline-block w-full h-96 bg-zinc-200 animate-pulse" />
           <div className="mt-6 inline-block w-full h-52 bg-zinc-200 animate-pulse" />
@@ -105,7 +110,12 @@ export default function Home() {
       ) : isError ? (
         <div className={cn(say !== "" && "hidden")}>There was an error</div>
       ) : (
-        <div className={cn(say !== "" && "hidden", "columns-3 gap-6")}>
+        <div
+          className={cn(
+            say !== "" && "hidden",
+            "sm:columns-2 lg:columns-3 gap-6"
+          )}
+        >
           {cats.map((cat, _) => {
             return (
               <div
