@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {
@@ -37,7 +38,7 @@ export default function Home() {
 
   useEffect(() => {
     refetch()
-  }, [tag])
+  }, [tag, refetch])
 
   const handleDownload = (url: string) => {
     const link = document.createElement("a")
@@ -90,6 +91,7 @@ export default function Home() {
         <img
           src={`https://cataas.com/cat/${tag}/says/${deferredSay}?fontSize=96&fontColor=yellow`}
           className="w-full h-auto bg-cover object-cover"
+          alt="custom cat"
         />
       )}
       {isPending || isFetching ? (
@@ -116,7 +118,7 @@ export default function Home() {
             "sm:columns-2 lg:columns-3 gap-6"
           )}
         >
-          {cats.map((cat, _) => {
+          {cats.map((cat) => {
             return (
               <div
                 key={cat._id}
@@ -125,6 +127,7 @@ export default function Home() {
                 <img
                   src={"https://cataas.com/cat/" + cat._id}
                   className="w-full h-auto bg-cover object-cover"
+                  alt="cat"
                 />
                 <div className="absolute left-0 top-0 w-full h-full flex justify-end items-end p-4 gap-4 opacity-0 hover:opacity-100 bg-gradient-to-b from-black/20 via-transparent to-black/20 transition-all">
                   <Button

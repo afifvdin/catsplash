@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
@@ -37,7 +38,7 @@ export default function SignInPage() {
   useEffect(() => {
     if (!isSuccess) return
     router.push("/")
-  }, [isSuccess])
+  }, [isSuccess, router])
 
   return (
     <div className="min-h-full flex flex-col items-center justify-center">

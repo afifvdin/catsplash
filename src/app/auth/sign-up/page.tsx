@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -39,7 +40,7 @@ export default function SignUpPage() {
   useEffect(() => {
     if (!isSuccess) return
     router.push("/")
-  }, [isSuccess])
+  }, [isSuccess, router])
 
   return (
     <div className="min-h-full flex flex-col items-center justify-center">
