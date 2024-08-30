@@ -1,5 +1,4 @@
 import { cookies } from "next/headers"
-import { cache } from "react"
 
 import type { Session, User } from "lucia"
 import { lucia } from "@/drizzle/lucia"
@@ -33,6 +32,11 @@ export const validateRequest = async (): Promise<
         sessionCookie.attributes
       )
     }
-  } catch {}
+  } catch {
+    return {
+      user: null,
+      session: null,
+    }
+  }
   return result
 }
