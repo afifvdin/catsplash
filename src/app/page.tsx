@@ -14,7 +14,7 @@ import {
 import { cn } from "@/lib/utils"
 import { useCats } from "@/services/queries"
 import { CatTag } from "@/types/cat"
-import { ArrowDown, CornerDownLeft } from "lucide-react"
+import { CornerDownLeft } from "lucide-react"
 import { FormEvent, useEffect, useState } from "react"
 import { signOut } from "./actions"
 import CatTile from "@/components/custom-ui/cat-tile"
