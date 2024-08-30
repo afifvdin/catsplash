@@ -7,5 +7,6 @@ export function useCats(page: number, tag: CatTag) {
     queryKey: ["cats", page, tag],
     queryFn: () => getCats(page, tag),
     placeholderData: keepPreviousData,
+    refetchOnWindowFocus: false,
   })
 }
