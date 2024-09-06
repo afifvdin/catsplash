@@ -1,7 +1,9 @@
 # Catsplash (based on [Cataas](https://cataas.com))
 > Search for cats or make a meme
 > 
-> [Loom Video](https://www.loom.com/share/06ee104ff63d4b93bfb30d11ff8608a7?sid=1170d3dd-2089-4ce4-9ece-428e867c777e)
+> [Challenge 1 Loom Video](https://www.loom.com/share/06ee104ff63d4b93bfb30d11ff8608a7?sid=1170d3dd-2089-4ce4-9ece-428e867c777e)
+>
+> [Challenge 2 Loom Video](https://www.loom.com/share/f08b1231d22045fe9476378cadf0d622?sid=d633defc-d29b-4c87-a4e8-fb48dfdd464b)
 ## Table of Contents
 - [Catsplash (based on Cataas)](#catsplash-based-on-cataas)
   - [Table of Contents](#table-of-contents)
